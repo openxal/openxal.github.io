@@ -1,0 +1,408 @@
+<html>
+<head>
+    <title>Open XAL</title>
+    <link rel="icon" type="image/png" href="images/Open XAL Icon.png" />
+    <link rel="stylesheet" type="text/css" href="common.css" media="all" />
+    <style>
+        .tasks .done { background-color: #afa; }
+        .tasks .progress { background-color: #ffa; }
+        .tasks .paused { background-color: #faa; }
+        .tasks .pending { background-color: white; }
+        .tasks { font-size: smaller; }
+        table.tasks { margin: 1em; }
+        table.tasks td.numeric { color: black; }
+        table.tasks td.warning { background-color: red; }
+        ul.features li { list-style-type: circle }
+        ul.requirements li { list-style-type: square }
+        .footer { font-style: italic; }
+        .token { font-weight: bolder; }
+        .literal { font-style: italic; }
+        .sample { background-color: #EEE; }
+		div.list { margin-left: 2em; }
+		div.list.topic { counter-reset: topic; }
+		div.list.subtopic { counter-reset: subtopic; }
+		div.list.topic > div { counter-increment: topic; }
+		div.list.subtopic > div { counter-increment: subtopic; }
+		div.list.topic > div:before { content: counter(topic) ". "; }
+		div.list.subtopic > div:before { content: counter(topic) "." counter(subtopic) ". "; }
+    </style>
+</head>
+<body>
+    <div class="title">Open XAL</div>
+    
+    
+    <div class="introduction">
+        <img src="images/Open XAL Icon.png" style="height: 3em; float: left;" />
+        Open XAL is an open source development environment used for creating accelerator physics applications, scripts and services. This project is a collaboration among SNS, CSNS, ESS, GANIL, TRIUMF and FRIB. Please visit the <a target="_blank" href="http://sourceforge.net/projects/xaldev/">project page</a> to participate.
+    </div>
+    
+    
+    <div class="section">
+        <div class="heading"><a name="features">Features</a></div>
+        Open XAL is designed to be a flexible application framework for developing accelerator physics applications with the following features:
+        <ul class="features">
+            <li>Open Source collaboration with dozens of developers across several sites</li>
+            <li>Pure Java for cross platform development and deployment</li>
+            <li>Application Framework for rapidly developing modern applications</li>
+            <li>Toolbox of Java packages</li>
+            <li>Collection of applications (over four dozen) and services</li>
+            <li>EPICS Channel Access support</li>
+            <li>Ant based build system independent of IDE</li>
+        </ul>
+    </div>
+    
+    
+    <div class="section">
+        <div class="heading"><a name="documentation">Documentation</a></div>
+        More Open XAL documenation will be available as the project progresses.
+        <ul class="features">
+            <li>Open XAL API <a target="_blank" href="javadoc/index.html">Javadoc</a></li>
+            <li><a target="_blank" href="http://sourceforge.net/p/xaldev/openxal/">Browse Source Code</a> - Latest Open XAL Code</li>
+        </ul>
+    </div>
+    
+    
+    <div class="section">
+        <div class="heading"><a name="building">Building Open XAL</a></div>
+        <div>
+            Below are the recommended system configuration tools for building and running Open XAL:
+            <ul class="requirements">
+                <li>Java J2SE 8 with JDK</li>
+                <li>Git 2.3 - (required for development only)</li>
+                <li>Ant 1.9.4 - (required for development only)</li>
+                <li>JRuby 1.7 - (optional: running JRuby scripts)</li>
+                <li>Jython 2.7 - (optional: running Jython scripts)</li>
+            </ul>
+        </div>
+        <div style="margin-top: 1em;">
+            Steps to get the source code and build Open XAL applications and services:
+            <ol>
+                <li><code class="literal sample">git clone ssh://<span class="token">YourSourceForgeID</span>@git.code.sf.net/p/xaldev/openxal</code></li>
+                <li><code class="literal sample">cd openxal</code></li>
+                <li><code class="literal sample">ant</code></li>
+            </ol>
+        </div>
+		<div style="margin-top: 1em;">
+			Please be sure to review and follow the project's <a href="#specifications">specifications</a> before commiting any code back to the project. Specifically, you should always follow the project's coding standards and the versioning rules. Coding for each task should take place on a task specific branch. Tom Pelaia will manage the master branch.
+		</div>
+    </div>
+
+
+    <div class="section">
+        <div class="heading"><a name="contributing">Contributing to Open XAL</a></div>
+        <div>
+            Below are the steps for contributing code back to the Open XAL community:
+            <div class="list topic">
+                <div>Propose a change to the community at a workshop or to the <a href="mailto:xaldev-board@lists.sourceforge.net">mailing list</a> and get feedback.</div>
+				<div>If accepted by the community:
+					<div class="list subtopic">
+						<div>Issue a ticket for the project using the <a href="https://sourceforge.net/p/xaldev/tickets/" target="_blank">ticket system</a> and take ownership or get someone else to take ownership.</div>
+						<div>Create a new branch for your ticket using the "milestone.ticketname" convention whether the milestone is represented with "m" followed by the milestone number and "ticketname" is a short name for your ticket. For example, a suitable branch name for a milestone one ticket to implement a formula parser could be "m1.formulaparser".</div>
+						<div>Implement your code and commit it to your ticket branch.</div>
+						<div>Notify the owner of the master branch who will then review your changes and merge your code into the master branch.</div>
+					</div>
+				</div>
+				<div>If not accepted by the community, you might:
+					<div class="list subtopic">
+						<div>Create your own site specific branch using the "site.<i>siteName</i>" prefix such as "site.mylab.master" replacing "mylab" with a short name for your site.</div>
+						<div>Implement your code and commit it to your site specific branch.</div>
+					</div>
+				</div>
+            </div>
+        </div>
+		<div style="margin-top: 1em;">
+			It is preferable to keep your code in synch with the community's branch so we have a coherent path forward with the project.
+		</div>
+		<div style="margin-top: 1em;">
+			Please be sure to review and follow the project's <a href="#specifications">specifications</a> before commiting any code back to the project. Specifically, you should always follow the project's coding standards and the versioning rules. Coding for each task should take place on a task specific branch. Tom Pelaia will manage the master branch.
+		</div>
+		<div style="margin-top: 1em;">
+			While you are free to maintain your custom site specific branches on the Open XAL SourceForge project site, you must still abide by all applicable laws (e.g. copyright laws). For example, don't add jar files or source code that you are not free to distribute to the public under our BSD style license.
+		</div>
+    </div>
+
+    
+    <div class="section">
+        <div class="heading"><a name="specifications">Specifications</a></div>
+        The following specifications are being implemented.
+        <ul class="features">
+            <li><a target="_blank" href="specs/SoftwareManagementGuide.pdf">Software Management Guide</a> (including coding standards)</li>
+            <li><a target="_blank" href="specs/Versioning.pdf">Versioning</a></li>
+            <li><a target="_blank" href="specs/OpenXALProjectStructure-Cka.pdf">Project Structure</a></li>
+            <li><a target="_blank" href="specs/Database Abstraction.pdf">Database Abstraction</a></li>
+            <li><a target="_blank" href="specs/Localization.pdf">Localization</a></li>
+            <li><a target="_blank" href="specs/XAL_Devices.pdf">XAL Devices</a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="section">
+        <div class="heading"><a name="roadmap">Roadmap</a></div>
+        Open XAL Phase II Tasks are in progress. The goal is to migrate the current version of XAL used at SNS to a new project more suitable for collaborative development. For deliverables detail, please see the <a target="_blank" href="https://sourceforge.net/p/xaldev/tickets/">Open XAL Tickets</a>.
+        <table class="data tasks">
+            <tr>
+                <th>Due Date</th>
+                <th>Progress</th>
+                <th>Task</th>
+                <th>Lead</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>October 31, 2010</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    Project Creation
+                    <ul>
+                        <li>Push current SNS modifications to XALDEV.</li>
+                        <li>Create new repository trunk and move XALDEV aside.</li>
+                        <li>Create new project skeleton in repository.</li>
+                        <li>Identify third party jars to retain in core and copy to new repository.</li>
+                        <li>Create Ant tasks for building core and database sections.</li>
+                    </ul>
+                </td>
+                <td>Tom Pelaia</td>
+                <td>Creates a skeleton project for Open XAL.</td>
+            </tr>
+            <tr>
+                <td>December 31, 2010</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    Website Development
+                    <ul>
+                        <li>Design and publish Open XAL website.</li>
+                    </ul>
+                </td>
+                <td>Tom Pelaia</td>
+                <td>Ongoing maintenance and content updates continue after due date.</td>
+            </tr>
+            <tr>
+                <td>February 15, 2011</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    Application Framework Migration
+                    <ul>
+                        <li>Determine Application Framework modifications and copy to core.</li>
+                    </ul>
+                </td>
+                <td>Tom Pelaia</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>April 30, 2011</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    Online Model Development
+                    <ul>
+                        <li>Design and implement new XAL online model.</li>
+                    </ul>
+                </td>
+                <td>Christopher Allen</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>September 30, 2011</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    Fix Compiler Lint Warnings
+                    <ul>
+                        <li>Fix all compiler warnings when compiling with all lint warnings enabled.</li>
+                    </ul>
+                </td>
+                <td>Tom Pelaia</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>February 28, 2012</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    JSON Framework Development
+                    <ul>
+                        <li>Design and implement JSON based services framework.</li>
+                    </ul>
+                </td>
+                <td>Tom Pelaia</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>February 28, 2012</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    Common Package Migration
+                    <ul>
+                        <li>Determine which core packages will be retained, modified (e.g. for database abstraction, removal of deprecated APIs) and where they will reside in the new project structure.</li>
+                        <li>Copy retained, unmodified packages to new repository trunk using new package naming convention and project structure</li>
+                        <li>Modify and copy remaining retained core packages to new repository.</li>
+                    </ul>
+                </td>
+                <td>Tom Pelaia</td>
+                <td>These packages should exclude services, application framework, online model, devices and test suites.</td>
+            </tr>
+            <tr>
+                <td>December 31, 2012</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    Services Migration
+                    <ul>
+                        <li>Identify, modify and copy retained services to the common services section using new package naming convention.</li>
+                    </ul>
+                </td>
+                <td>Tom Pelaia</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>June 30, 2013</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    <a target="_blank" href="https://sourceforge.net/p/xaldev/tickets/milestone/1.0/">Milestone 1 Tickets</a>
+                    <ul>
+                        <li>Project architecture and JDK 7 migration.</li>
+                        <li>Online Model: collaboration integration, state fetching performance, benchmarking.</li>
+                        <li>Scan bug fixes.</li>
+                    </ul>
+                </td>
+                <td>Collaboration</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>December 31, 2013</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    <a target="_blank" href="https://sourceforge.net/p/xaldev/tickets/milestone/2.0/">Milestone 2 Tickets</a>
+                    <ul>
+                        <li>Port common XAL applications and services to Open XAL and keep Open XAL synchronized with XAL patches.</li>
+                        <li>Split project into common core, extensions, plugins, services and applications.</li>
+                        <li>Virtual Accelerator Enhancements.</li>
+                        <li>Design and develop robust lattice generator.</li>
+                        <li>Online Model machine parameter calculator.</li>
+                        <li>Probe Editor Enhancements.</li>
+                        <li>Extract WheelSwitch out of external jar and into the main code.</li>
+                        <li>Extract matrix operations formerly in Jama into the main code.</li>
+                    </ul>
+                </td>
+                <td>Collaboration</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>June 30, 2014</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    <a target="_blank" href="https://sourceforge.net/p/xaldev/tickets/milestone/3.0/">Milestone 3 Tickets</a>
+                    <ul>
+                        <li>Elapsed Time Mechanism for Bending Dipoles</li>
+                        <li>Launcher Application version 1.1</li>
+                        <li>Use Java Generics in Online Model</li>
+                        <li>Support Scripts in Application Framework</li>
+                        <li>Add convenience class and methods to DispatchQueue</li>
+                        <li>Fix JavaDoc errors</li>
+                        <li>Build a distributed services system</li>
+                        <li>Update the services framework to support web sockets</li>
+                        <li>Generate XML Schemas</li>
+						<li>Configurable element mapping</li>
+                        <li>Generate Documentation</li>
+                        <li>Implement a resource manager for loading resources (adding support for site specific resources and both jar and file based)</li>
+						<li>Support application based extensions</li>
+						<li>Various Bugfixes</li>
+                    </ul>
+                </td>
+                <td>Collaboration</td>
+                <td></td>
+            </tr>
+			<tr>
+				<td>September 30, 2014</td>
+				<td class="numeric done">100%</td>
+				<td>
+					<a target="_blank" href="https://sourceforge.net/p/xaldev/tickets/milestone/4.0/">Milestone 4 Tickets</a>
+					<ul>
+						<li>Reduce memory footprint of service communication</li>
+						<li>Partial Trajectory Orbit</li>
+					</ul>
+				</td>
+				<td>Collaboration</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>December 31, 2014</td>
+				<td class="numeric done">100%</td>
+				<td>
+					<a target="_blank" href="https://sourceforge.net/p/xaldev/tickets/milestone/5.0/">Milestone 5 Tickets</a>
+					<ul>
+						<li>Post the BSD License</li>
+						<li>Create Experiment Automator Application</li>
+					</ul>
+				</td>
+				<td>Collaboration</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>December 31, 2015</td>
+				<td class="numeric progress">50%</td>
+				<td>
+					<a target="_blank" href="https://sourceforge.net/p/xaldev/tickets/milestone/6.0/">Milestone 6 Tickets</a>
+					<ul>
+						<li>Migrate to Java 8</li>
+						<li>Fix JavaDoc errors</li>
+						<li>Fix the Virtual Accelerator probe editor</li>
+						<li>Allow users to edit the probe in orbit correction</li>
+						<li>Remove IProbeState Interface from Online Model</li>
+						<li>Correct the reference frame for spacecharge impulses</li>
+						<li>Continuous Integration</li>
+						<li>Refactor "Elapsed Time" Mechanism in IdealRfGap</li>
+					</ul>
+				</td>
+				<td>Collaboration</td>
+				<td></td>
+			</tr>
+       </table>
+
+
+        <table class="data tasks">
+            <tr>
+                <td class="pending">Pending</td>
+                <td class="paused">Paused</td>
+                <td class="progress">Progress</td>
+                <td class="done">Done</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="section">
+        <div class="heading"><a name="meetings">Meetings and Workshops</a></div>
+		<span style="color: gray;">Virtual</span>
+		<ul class="grouplist">
+			<li>Monthly International Online Video Meetings</li>
+        </ul>
+		<span style="color: gray;">In Person</span>
+		<ul class="grouplist">
+			<li><a target="_blank" href="meetings/2015/index.html">June 2015 CSNS Software Symposium</a> at China Spallation Neutron Source in Dongguan, Guangdong, China</li>
+			<li>May 2015 Satellite meeting at IPAC in Richmond, VA</li>
+			<li>March 2014 Workshop at the European Spallation Source in Lund, Sweden</li>
+			<li>July 2013 Workshop at SNS, Oak Ridge National Lab in Oak Ridge, TN</li>
+			<li>May 15, 2013 Satellite Meeting at IPAC in Shanghai, China</li>
+            <li><a target="_blank" href="meetings/2012/index.html">December 2012 Workshop</a> at FRIB, Michigan State University in Lansing, MI</li>
+            <li><a target="_blank" href="meetings/2010/index.html">May 2010 Workshop</a> at SNS, Oak Ridge National Lab in Oak Ridge, TN</li>
+        </ul>
+    </div>
+
+
+    <div class="section">
+        <div class="heading"><a name="training">Training</a></div>
+		<ul class="grouplist">
+			<li>January 2014 - <a target="_blank" href="training/2014/uspas/index.html">Control Room Accelerator Physics</a> course at the U.S. Particle Accelerator School</li>
+        </ul>
+    </div>
+
+    
+    <div class="section">
+        <div class="heading"><a name="externalresources">External Resources</a></div>
+        <ul class="features">
+            <li><a target="_blank" href="https://wiki.ornl.gov/sites/xaldocs/PHYS798X%20Course%20Material/Forms/AllItems.aspx">XAL Course Material</a> - U.S. Particle Accelerator School 2008</li>
+            <li><a target="_blank" href="http://www.aps.anl.gov/epics/">EPICS</a></li>
+            <li><a target="_blank" href="http://jca.cosylab.com/downloads.html">JCA/JNI</a></li>
+            <li><a target="_blank" href="http://caj.cosylab.com/">JCA/CAJ</a></li>
+        </ul>
+    </div>
+    
+    <div class="footer">Last updated June 30, 2015 by Tom Pelaia</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Control Room Accelerator Physics</title>
+    <link rel="icon" type="image/png" href="images/Open XAL Icon.png" />
+    <link rel="stylesheet" type="text/css" href="../../../common.css" media="all" />
+    <style>
+        .tasks .done { background-color: #afa; }
+        .tasks .progress { background-color: #ffa; }
+        .tasks .paused { background-color: #faa; }
+        .tasks .pending { background-color: white; }
+        .tasks { font-size: smaller; }
+        table.tasks { margin: 1em; }
+        table.tasks td.numeric { color: black; }
+        table.tasks td.warning { background-color: red; }
+        ul.features li { list-style-type: circle }
+        ul.requirements li { list-style-type: square }
+        .footer { font-style: italic; }
+        .token { font-weight: bolder; }
+        .literal { font-style: italic; }
+        .sample { background-color: #EEE; }
+		div.list { margin-left: 2em; }
+		div.list.topic { counter-reset: topic; }
+		div.list.subtopic { counter-reset: subtopic; }
+		div.list.topic > div { counter-increment: topic; }
+		div.list.subtopic > div { counter-increment: subtopic; }
+		div.list.topic > div:before { content: counter(topic) ". "; }
+		div.list.subtopic > div:before { content: counter(topic) "." counter(subtopic) ". "; }
+    </style>
+</head>
+<body>
+    <div class="title">
+		Control Room Accelerator Physics
+		<div class="subtitle">2014 U.S. Particle Accelerator School in Knoxville, TN</div>
+	</div>
+
+    
+    <div class="introduction"> The Control Room Accelerator Physics course of the 2014 U.S. Particle Accelerator School in Knoxville, TN covered general high level application topics for the commissioning and operation of an accelerator. Open XAL was used as the accelerator physics software platform for this class. The <a target="_blank" href="http://uspas.fnal.gov/materials/14Knoxville/Knox_ControlRoom.shtml">lectures</a> cover many topics including a few lectures on Open XAL and specific Open XAL technologies such as the online model and solver. A <a href="Tutorial.zip">Tutorial</a> demonstrates how to build an application that uses the application framework, accelerator hierarchy, solver and online model.
+    </div>
+
+    <div class="section">
+        <div class="heading"><a name="lectures">Lectures</a></div>
+        The <a target="_blank" href="http://uspas.fnal.gov/materials/14Knoxville/Knox_ControlRoom.shtml">lectures</a> cover the following Open XAL topics:
+        <ul class="features">
+            <li>General introduction</li>
+            <li>Getting and building Open XAL from the command line</li>
+            <li>Accelerator hierarchy including how to query for devices</li>
+            <li>Online Model</li>
+            <li>Solver</li>
+            <li>Online Model</li>
+            <li>Application development</li>
+            <li>Project layout</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="heading"><a name="tutorial">Tutorial</a></div>
+        This <a href="Tutorial.zip">tutorial</a> is designed to lead you through the development of an Open XAL application (Misalignment Fit). The tutorial consists of three stages emphasizing three different Open XAL technologies and a final completed application. The Misalignment Generator application is a modified version of the Virtual Accelerator which allows the user to generator a random misalignment of a selected quadrupole. The Misalignment Fit application is tasked with determing the misalignment using orbit measurements.
+        <ol class="features">
+            <li>Displaying the live orbit from the machine.</li>
+            <li>Peforming what-if evaluations using the online model.</li>
+            <li>Using the solver to determine the quadrupole misalignment.</li>
+        </ol>
+    </div>
+</body>
+</html>
