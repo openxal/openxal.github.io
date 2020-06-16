@@ -18,13 +18,13 @@
         .token { font-weight: bolder; }
         .literal { font-style: italic; }
         .sample { background-color: #EEE; }
-		div.list { margin-left: 2em; }
-		div.list.topic { counter-reset: topic; }
-		div.list.subtopic { counter-reset: subtopic; }
-		div.list.topic > div { counter-increment: topic; }
-		div.list.subtopic > div { counter-increment: subtopic; }
-		div.list.topic > div:before { content: counter(topic) ". "; }
-		div.list.subtopic > div:before { content: counter(topic) "." counter(subtopic) ". "; }
+        div.list { margin-left: 2em; }
+        div.list.topic { counter-reset: topic; }
+        div.list.subtopic { counter-reset: subtopic; }
+        div.list.topic > div { counter-increment: topic; }
+        div.list.subtopic > div { counter-increment: subtopic; }
+        div.list.topic > div:before { content: counter(topic) ". "; }
+        div.list.subtopic > div:before { content: counter(topic) "." counter(subtopic) ". "; }
     </style>
 </head>
 <body>
@@ -82,9 +82,9 @@
                 <li><code class="literal sample">ant</code></li>
             </ol>
         </div>
-		<div style="margin-top: 1em;">
-			Please be sure to review and follow the project's <a href="#specifications">specifications</a> before commiting any code back to the project. Specifically, you should always follow the project's coding standards and the versioning rules. Coding for each task should take place on a task specific branch. Tom Pelaia will manage the master branch.
-		</div>
+        <div style="margin-top: 1em;">
+            Please be sure to review and follow the project's <a href="#specifications">specifications</a> before commiting any code back to the project. Specifically, you should always follow the project's coding standards and the versioning rules. Coding for each task should take place on a task specific branch. Tom Pelaia will manage the master branch.
+        </div>
     </div>
 
 
@@ -94,31 +94,31 @@
             Below are the steps for contributing code back to the Open XAL community:
             <div class="list topic">
                 <div>Propose a change to the community at a workshop or start a conversation on a repository and get feedback.</div>
-				<div>If accepted by the community:
-					<div class="list subtopic">
-						<div>Issue a ticket for the project using the <a href="https://github.com/openxal/openxal/issues" target="_blank">ticket system</a> and take ownership or get someone else to take ownership.</div>
-						<div>Create a new branch for your ticket using the "milestone.ticketname" convention whether the milestone is represented with "m" followed by the milestone number and "ticketname" is a short name for your ticket. For example, a suitable branch name for a milestone one ticket to implement a formula parser could be "m1.formulaparser".</div>
-						<div>Implement your code and commit it to your ticket branch.</div>
-						<div>Notify the owner of the master branch who will then review your changes and merge your code into the master branch.</div>
-					</div>
-				</div>
-				<div>If not accepted by the community, you might:
-					<div class="list subtopic">
-						<div>Create your own site specific branch using the "site.<i>siteName</i>" prefix such as "site.mylab.master" replacing "mylab" with a short name for your site.</div>
-						<div>Implement your code and commit it to your site specific branch.</div>
-					</div>
-				</div>
+                <div>If accepted by the community:
+                    <div class="list subtopic">
+                        <div>Issue a ticket for the project using the <a href="https://github.com/openxal/openxal/issues" target="_blank">ticket system</a> and take ownership or get someone else to take ownership.</div>
+                        <div>Create a new branch for your ticket using the "milestone.ticketname" convention whether the milestone is represented with "m" followed by the milestone number and "ticketname" is a short name for your ticket. For example, a suitable branch name for a milestone one ticket to implement a formula parser could be "m1.formulaparser".</div>
+                        <div>Implement your code and commit it to your ticket branch.</div>
+                        <div>Notify the owner of the master branch who will then review your changes and merge your code into the master branch.</div>
+                    </div>
+                </div>
+                <div>If not accepted by the community, you might:
+                    <div class="list subtopic">
+                        <div>Create your own site specific branch using the "site.<i>siteName</i>" prefix such as "site.mylab.master" replacing "mylab" with a short name for your site.</div>
+                        <div>Implement your code and commit it to your site specific branch.</div>
+                    </div>
+                </div>
             </div>
         </div>
-		<div style="margin-top: 1em;">
-			It is preferable to keep your code in synch with the community's branch so we have a coherent path forward with the project.
-		</div>
-		<div style="margin-top: 1em;">
-			Please be sure to review and follow the project's <a href="#specifications">specifications</a> before commiting any code back to the project. Specifically, you should always follow the project's coding standards and the versioning rules. Coding for each task should take place on a task specific branch. Tom Pelaia will manage the master branch.
-		</div>
-		<div style="margin-top: 1em;">
-			While you are free to maintain your custom site specific branches on the Open XAL GitHub project site, you must still abide by all applicable laws (e.g. copyright laws). For example, don't add jar files or source code that you are not free to distribute to the public under our BSD style license.
-		</div>
+        <div style="margin-top: 1em;">
+            It is preferable to keep your code in synch with the community's branch so we have a coherent path forward with the project.
+        </div>
+        <div style="margin-top: 1em;">
+            Please be sure to review and follow the project's <a href="#specifications">specifications</a> before commiting any code back to the project. Specifically, you should always follow the project's coding standards and the versioning rules. Coding for each task should take place on a task specific branch. Tom Pelaia will manage the master branch.
+        </div>
+        <div style="margin-top: 1em;">
+            While you are free to maintain your custom site specific branches on the Open XAL GitHub project site, you must still abide by all applicable laws (e.g. copyright laws). For example, don't add jar files or source code that you are not free to distribute to the public under our BSD style license.
+        </div>
     </div>
 
     
@@ -136,18 +136,18 @@
     </div>
 
 
-	<div class="section">
-		<div class="heading"><a name="supportingdocumentation">Supporting Documentation</a></div>
-		The following documents and presentations provide supporting information for this project.
-		<ul class="features">
-			<li><a target="_blank" href="docs/ProjectArchitecture.pdf">Open XAL Project Architecture</a></li>
-			<li><a target="_blank" href="docs/ROAA04.pdf">XAL ONLINE MODEL ENHANCEMENTS FOR J-PARC COMMISSIONING AND OPERATION</a></li>
-			<li><a target="_blank" href="docs/SimulatingBeamsWithEllipsoidalSymmetry-SecondEdition.pdf">THEORY AND TECHNIQUE OF BEAM ENVELOPE SIMULATION</a></li>
-			<li><a target="_blank" href="docs/SoftwareEngineeringAndBeamSimulation.pdf">A SOFTWARE ENGINEERING APPROACH TO PARTICLE BEAM SIMULATION</a></li>
-			<li><a target="_blank" href="docs/SymplecticityAndNumericalIntegrationInBeamOptics-Ver3.pdf">Symplecticity in the Numerical Integration of Linear Beam Optics</a></li>
-			<li><a target="_blank" href="docs/XalConfigurationAndInitialization-2ndEd[1].pdf">Configuration and Initialization of the XAL High-Level Application Development Environment</a></li>
-		</ul>
-	</div>
+    <div class="section">
+        <div class="heading"><a name="supportingdocumentation">Supporting Documentation</a></div>
+        The following documents and presentations provide supporting information for this project.
+        <ul class="features">
+            <li><a target="_blank" href="docs/ProjectArchitecture.pdf">Open XAL Project Architecture</a></li>
+            <li><a target="_blank" href="docs/ROAA04.pdf">XAL ONLINE MODEL ENHANCEMENTS FOR J-PARC COMMISSIONING AND OPERATION</a></li>
+            <li><a target="_blank" href="docs/SimulatingBeamsWithEllipsoidalSymmetry-SecondEdition.pdf">THEORY AND TECHNIQUE OF BEAM ENVELOPE SIMULATION</a></li>
+            <li><a target="_blank" href="docs/SoftwareEngineeringAndBeamSimulation.pdf">A SOFTWARE ENGINEERING APPROACH TO PARTICLE BEAM SIMULATION</a></li>
+            <li><a target="_blank" href="docs/SymplecticityAndNumericalIntegrationInBeamOptics-Ver3.pdf">Symplecticity in the Numerical Integration of Linear Beam Optics</a></li>
+            <li><a target="_blank" href="docs/XalConfigurationAndInitialization-2ndEd[1].pdf">Configuration and Initialization of the XAL High-Level Application Development Environment</a></li>
+        </ul>
+    </div>
 
 
     <div class="section">
@@ -311,42 +311,42 @@
                         <li>Build a distributed services system</li>
                         <li>Update the services framework to support web sockets</li>
                         <li>Generate XML Schemas</li>
-						<li>Configurable element mapping</li>
+                        <li>Configurable element mapping</li>
                         <li>Generate Documentation</li>
                         <li>Implement a resource manager for loading resources (adding support for site specific resources and both jar and file based)</li>
-						<li>Support application based extensions</li>
-						<li>Various Bugfixes</li>
+                        <li>Support application based extensions</li>
+                        <li>Various Bugfixes</li>
                     </ul>
                 </td>
                 <td>Collaboration</td>
                 <td></td>
             </tr>
-			<tr>
-				<td>September 30, 2014</td>
-				<td class="numeric done">100%</td>
-				<td>
-					<a target="_blank" href="https://sourceforge.net/p/xaldev/tickets/milestone/4.0/">Milestone 4 Tickets</a>
-					<ul>
-						<li>Reduce memory footprint of service communication</li>
-						<li>Partial Trajectory Orbit</li>
-					</ul>
-				</td>
-				<td>Collaboration</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>December 31, 2014</td>
-				<td class="numeric done">100%</td>
-				<td>
-					<a target="_blank" href="https://sourceforge.net/p/xaldev/tickets/milestone/5.0/">Milestone 5 Tickets</a>
-					<ul>
-						<li>Post the BSD License</li>
-						<li>Create Experiment Automator Application</li>
-					</ul>
-				</td>
-				<td>Collaboration</td>
-				<td></td>
-			</tr>
+            <tr>
+                <td>September 30, 2014</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    <a target="_blank" href="https://sourceforge.net/p/xaldev/tickets/milestone/4.0/">Milestone 4 Tickets</a>
+                    <ul>
+                        <li>Reduce memory footprint of service communication</li>
+                        <li>Partial Trajectory Orbit</li>
+                    </ul>
+                </td>
+                <td>Collaboration</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>December 31, 2014</td>
+                <td class="numeric done">100%</td>
+                <td>
+                    <a target="_blank" href="https://sourceforge.net/p/xaldev/tickets/milestone/5.0/">Milestone 5 Tickets</a>
+                    <ul>
+                        <li>Post the BSD License</li>
+                        <li>Create Experiment Automator Application</li>
+                    </ul>
+                </td>
+                <td>Collaboration</td>
+                <td></td>
+            </tr>
 
        </table>
 
@@ -364,29 +364,34 @@
 
     <div class="section">
         <div class="heading"><a name="meetings">Meetings and Workshops</a></div>
-		<span style="color: gray;">Virtual</span>
-		<ul class="grouplist">
-			<li>International Online Video Meetings</li>
+        <span style="color: gray;">Virtual</span>
+        <ul class="grouplist">
+            <li>International Online Video Meetings</li>
             <ul>
-		<li>2018, Mar. 22: <a target="_blank" href="meetings/2018/oxal-ess-status-22-03-2018.pptx">ESS presentation</a>
-                </li>
+        <li>2020, Jun. 16:
+            <a target="_blank" href="meetings/2020/2020-06_ess_status.pdf">ESS presentation</a>
+        </li>
+        <li>2018, Mar. 22:
+            <a target="_blank" href="meetings/2018/oxal-ess-status-22-03-2018.pptx">ESS presentation</a>
+        </li>
 
-		<li>2017, Nov. 21: <a target="_blank" href="meetings/2017/oxal-ess-status-11-2017.pptx">ESS presentation</a>
-		and <a target="_blank" href="meetings/2017/2017_11_21_OpenXalAccelerationModel-ver1.pdf">SNS presentation</a>
-		 </li>
-		<li><a target="_blank" href="meetings/2017/2017-03-28_OpenXalVideoMeeting.pptx">2017, Mar. 28</a></li>
+        <li>2017, Nov. 21:
+            <a target="_blank" href="meetings/2017/oxal-ess-status-11-2017.pptx">ESS presentation</a>
+        and <a target="_blank" href="meetings/2017/2017_11_21_OpenXalAccelerationModel-ver1.pdf">SNS presentation</a>
+        </li>
+        <li><a target="_blank" href="meetings/2017/2017-03-28_OpenXalVideoMeeting.pptx">2017, Mar. 28</a></li>
                 <li><a target="_blank" href="meetings/2016/2016-08-25_OpenXalCollaborationActivities.pdf">2016, Aug. 25</a></li>
                 
-            </ul>
         </ul>
-		<span style="color: gray;">In Person</span>
-		<ul class="grouplist">
-			<li>May 2017 Satellite meeting at IPAC'17 in Copenhagen, Denmark</li>
-			<li><a target="_blank" href="meetings/2015/index.html">June 2015 CSNS Software Symposium</a> at China Spallation Neutron Source in Dongguan, Guangdong, China</li>
-			<li>May 2015 Satellite meeting at IPAC in Richmond, VA</li>
-			<li>March 2014 Workshop at the European Spallation Source in Lund, Sweden</li>
-			<li>July 2013 Workshop at SNS, Oak Ridge National Lab in Oak Ridge, TN</li>
-			<li>May 15, 2013 Satellite Meeting at IPAC in Shanghai, China</li>
+        </ul>
+        <span style="color: gray;">In Person</span>
+        <ul class="grouplist">
+            <li>May 2017 Satellite meeting at IPAC'17 in Copenhagen, Denmark</li>
+            <li><a target="_blank" href="meetings/2015/index.html">June 2015 CSNS Software Symposium</a> at China Spallation Neutron Source in Dongguan, Guangdong, China</li>
+            <li>May 2015 Satellite meeting at IPAC in Richmond, VA</li>
+            <li>March 2014 Workshop at the European Spallation Source in Lund, Sweden</li>
+            <li>July 2013 Workshop at SNS, Oak Ridge National Lab in Oak Ridge, TN</li>
+            <li>May 15, 2013 Satellite Meeting at IPAC in Shanghai, China</li>
             <li><a target="_blank" href="meetings/2012/index.html">December 2012 Workshop</a> at FRIB, Michigan State University in Lansing, MI</li>
             <li><a target="_blank" href="meetings/2010/index.html">May 2010 Workshop</a> at SNS, Oak Ridge National Lab in Oak Ridge, TN</li>
         </ul>
@@ -395,8 +400,8 @@
 
     <div class="section">
         <div class="heading"><a name="training">Training</a></div>
-		<ul class="grouplist">
-			<li>January 2014 - <a target="_blank" href="training/2014/uspas/index.html">Control Room Accelerator Physics</a> course at the U.S. Particle Accelerator School</li>
+        <ul class="grouplist">
+            <li>January 2014 - <a target="_blank" href="training/2014/uspas/index.html">Control Room Accelerator Physics</a> course at the U.S. Particle Accelerator School</li>
         </ul>
     </div>
 
